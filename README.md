@@ -5,8 +5,7 @@
 * [![charles]][charles_url]
 * ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/metabolize/rq-dashboard-on-heroku)
 * [![pycharm]][pycharm_url]
-* and so on...
-## 逆向工程项目
+## 逆向工程项目(项目里面有详细的日志)
 1.  [空中网逆向](https://github.com/q6378561/js-reverse-log/tree/master/kongzhongwang)
 2.  [青果教务系统](https://github.com/q6378561/js-reverse-log/tree/master/qingguo)
 
