@@ -2,6 +2,12 @@
 # 逆向青果软件有限公司外包的教务系统登录接口
 > 很早以前为了抢课就研究过学校的登录接口,当时刚碰JS遇到了许多坑,故记下此篇造福人类,也让自己复习一遍,完整的代码可以点此仓库的py文件模拟登录,但希望点进来观看的你看了此篇教程能有一点点收获就是乱舞神菜最大的荣幸!
 
+## 逆向环境
+* [![chrome]][chrome_url]
+* [![charles]][charles_url]
+* ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/metabolize/rq-dashboard-on-heroku)
+* [![pycharm]][pycharm_url]
+
 ## POST请求解析
 研究登录接口的第一件事就是对登录的post的请求进行解析,看看传入的参数是否加密以及是否有多余的参数.如果没有,那么恭喜你这篇教程不用看了,直接对明文参数进行post进行登录研究.
 
@@ -133,9 +139,17 @@ ctx.call('strEnc', parms, _deskey)
 ## 总结
 此次逆向说难不难说简单不简单,算是对新手来说是很方面的加密了,但是综合性很强,我们需要分析协议,下断点,分析js代码,甚至利用正则表达式,好在js代码是明文这让我们的逆向工作简单了很多,希望各位看到这边文章能有所收获,共同进步!
 
-##运行环境
-* python3
-* execjs
-* base64
-* hashlib
-* re
+## 支持作者
+喜欢我的话点一下下方的按钮哦!
+
+![GitHub followers](https://img.shields.io/github/followers/q6378561?style=social)
+![GitHub stars](https://img.shields.io/github/stars/q6378561/js-reverse-log?style=social)
+![GitHub forks](https://img.shields.io/github/forks/q6378561/js-reverse-log?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/q6378561/js-reverse-log?style=social)
+
+[chrome]: https://img.shields.io/badge/chrome-80.0.3987.122-ff69b4
+[chrome_url]: https://www.google.com/chrome/
+[charles]: https://img.shields.io/badge/charles-v3.11.2-brightgreen
+[charles_url]: https://www.charlesproxy.com/
+[pycharm]: https://img.shields.io/badge/pycharm-professional-red
+[pycharm_url]: https://www.jetbrains.com/pycharm/
