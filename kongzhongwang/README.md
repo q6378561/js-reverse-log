@@ -1,5 +1,12 @@
 # 空中网登录逆向
 > 空中网登录逆向相对来说难度不高,但是也有碰到许多坑,故写下此日志记录爬坑
+
+## 逆向环境
+* [![chrome]][chrome_url]
+* [![charles]][charles_url]
+* ![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/metabolize/rq-dashboard-on-heroku)
+* [![pycharm]][pycharm_url]
+
 ## 接口解析
 空中网的登录接口采用目前少见的get请求来设置cookie登录,但其中参数是有加密的,我们此次的目标就是逆向出其中的加密方式,首先我们来看一下登录get请求中需要的参数
 
@@ -35,4 +42,19 @@ F11不断跟进之后会发现我们来到了VM文件,**VM是浏览器为匿名�
 2. 通过python的requests库中的session会话来保持会话完全模拟从主页面到login等协议请求的cookie获取
 3. 刚写完代码时,提交请求返回的是操作太过频繁,本以为是频繁恶意操作被banIP了,结果换了个IP代理发现还是这样,结合JS文件中对temptime的时间间隔判断(原JS文件只有间隔过长返回NULL的判断,间隔过段的判断应该是在后端,只是联想到了是否有这种可能).于是采用了python文件的time模块的sleep函数等待几秒发现status状态返回成功了.
 4. 虽然可能看日志觉得逆向很快,但还是要一步一步慢慢调试,才获取到的这些信息
+
+## 支持作者
+喜欢我的话点一下下方的按钮哦!
+
+![GitHub followers](https://img.shields.io/github/followers/q6378561?style=social)
+![GitHub stars](https://img.shields.io/github/stars/q6378561/js-reverse-log?style=social)
+![GitHub forks](https://img.shields.io/github/forks/q6378561/js-reverse-log?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/q6378561/js-reverse-log?style=social)
+
+[chrome]: https://img.shields.io/badge/chrome-80.0.3987.122-ff69b4
+[chrome_url]: https://www.google.com/chrome/
+[charles]: https://img.shields.io/badge/charles-v3.11.2-brightgreen
+[charles_url]: https://www.charlesproxy.com/
+[pycharm]: https://img.shields.io/badge/pycharm-professional-red
+[pycharm_url]: https://www.jetbrains.com/pycharm/
 
